@@ -1,9 +1,12 @@
 import LandingNav from './landing-nav'
+import cd from 'classnames'
+import layoutStyles from '../styles/landing-layout.module.css'
+import mainStyles from '../styles/main.module.css'
 
 const LandingLayout = ({ children }) => (
-  <div className="min-h-screen flex flex-col">
+  <div className={cd('min-h-screen flex flex-col', layoutStyles.layout)}>
     <LandingNav />
-    <main>{children}</main>
+    <main className={mainStyles.main}>{children}</main>
   </div>
 )
 
