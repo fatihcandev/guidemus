@@ -1,5 +1,9 @@
+import LandingLayout from '../components/landing-layout'
+
 const Index = () => (
-    <div>Hello, Next.js!</div>
+  <LandingLayout>
+    <div className="self-center">Hello, world!</div>
+  </LandingLayout>
 )
 
 export default Index
