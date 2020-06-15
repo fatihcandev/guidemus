@@ -1,8 +1,9 @@
 import LandingLayout from '../components/landing-layout'
+import LandingSearch from '../components/landing-search'
 
 const Index = () => (
   <LandingLayout>
-    <div className="self-center">Hello, world!</div>
+    <LandingSearch />
   </LandingLayout>
 )
 
