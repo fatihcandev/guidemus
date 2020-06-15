@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:css && next build",
     "build:css": "npx tailwindcss build styles/tailwind.css -c tailwind.config.js -o styles/style.css",
     "start": "next start"
   },
@@ -16,8 +16,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.8",
-    "tailwindcss": "^1.4.6",
-    "typeface-roboto": "0.0.75"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "lqip-loader": "^2.2.0",
