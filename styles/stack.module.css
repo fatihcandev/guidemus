@@ -1,0 +1,27 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+.stack * + * {
+  margin-top: var(--gap);
+}
+
+.row {
+  flex-direction: row;
+}
+.row * + * {
+  margin-top: 0;
+  margin-left: var(--gap);
+}
+
+@media (min-width: 640px) {
+  .responsive {
+    flex-direction: row;
+  }
+  .responsive * + * {
+    margin-top: 0;
+    margin-left: var(--gap);
+  }
+}
+
+/*# sourceMappingURL=stack.module.css.map */
