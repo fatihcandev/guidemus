@@ -8,6 +8,7 @@
 
 .row {
   flex-direction: row;
+  align-items: center;
 }
 .row * + * {
   margin-top: 0;
@@ -17,6 +18,7 @@
 @media (min-width: 640px) {
   .responsive {
     flex-direction: row;
+    align-items: center;
   }
   .responsive * + * {
     margin-top: 0;
