@@ -3,7 +3,7 @@ import SearchIcon from './icons/search'
 import Stack from './stack'
 
 const LandingSearch = () => (
-  <Stack row className="w-full mx-auto sm:w-3/4 md:w-1/2 lg:w-1/3">
+  <Stack row className="w-full mx-auto sm:w-3/4 lg:w-1/2 xl:w-1/3">
     <SearchIcon className="absolute transform translate-x-6" />
     <Input
       className="w-full py-4 px-2 pl-12 shadow-md rounded-md"
