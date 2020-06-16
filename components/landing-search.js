@@ -4,10 +4,11 @@ import Stack from './stack'
 
 const LandingSearch = () => (
   <Stack row className="w-full mx-auto sm:w-3/4 lg:w-1/2 xl:w-1/3">
-    <SearchIcon className="absolute transform translate-x-6" />
+    <SearchIcon className="absolute transform translate-x-6 z-20" />
     <Input
       className="w-full py-4 px-2 pl-12 shadow-md rounded-md"
       ph="Search for a country, city or university"
+      label="Search for a country, city or university"
     />
   </Stack>
 )
