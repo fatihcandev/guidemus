@@ -1,15 +1,16 @@
 import LandingNav from './landing-nav'
 import cn from 'classnames'
 import layoutStyles from '../styles/landing-layout.module.scss'
-import mainStyles from '../styles/main.module.css'
-import Seo from './seo'
+import mainStyles from '../styles/main.module.scss'
+import SEO from './seo'
 import Image from './image'
+import { Html } from 'next/document'
 
 const landing = require('../public/landing.jpg?lqip')
 
 const LandingLayout = ({ children }) => (
   <>
-    <Seo title="guidemus | Find the best guide for your Erasmus journey." />
+    <SEO title="guidemus | Find the best guide for your Erasmus journey." />
     <Image
       src={landing.src}
       alt="directions"
