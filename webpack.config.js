@@ -1,6 +1,8 @@
 module.exports = {
-  test: /\.jpe?g$/,
+  test: /\.(jpe?g|png)$/i,
   loaders: [
+    'file-loader',
+    'webp-loader',
     {
       loader: 'lqip-loader',
       options: {
