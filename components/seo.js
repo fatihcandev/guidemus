@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import { Helmet } from 'react-helmet'
 
-const Seo = ({ title }) => {
+const SEO = ({ title }) => {
   return (
-    <Head>
+    <Helmet>
+      <html lang="en" />
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
@@ -29,8 +31,8 @@ const Seo = ({ title }) => {
         property="twitter:description"
         content="A platform for the students to find the best guide for their Erasmus journey."
       />
-    </Head>
+    </Helmet>
   )
 }
 
-export default Seo
+export default SEO
