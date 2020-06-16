@@ -1,3 +1,3 @@
-const TextBody = ({ children, ...props }) => <span {...props}>{children}</span>
+const TextBody = ({ children, ...props }) => <p {...props}>{children}</p>
 
 export default TextBody
