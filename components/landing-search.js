@@ -8,7 +8,6 @@ const LandingSearch = () => (
     <Input
       className="w-full py-4 px-2 pl-12 shadow-md rounded-md"
       ph="Search for a country, city or university"
-      label="Search for a country, city or university"
     />
   </Stack>
 )
