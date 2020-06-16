@@ -17,11 +17,13 @@ const LandingNav = () => (
         </NavItem>
         <NavItem
           href="/sign-up"
-          className="py-2 px-3 bg-blue-500 rounded-md transition-colors duration-300 hover:bg-blue-700"
+          className="text-white py-2 px-3 bg-blue-500 rounded-md transition-colors duration-300 hover:bg-blue-700"
         >
           Sign Up
         </NavItem>
-        <NavItem href="/about">About</NavItem>
+        <NavItem className="text-white" href="/about">
+          About
+        </NavItem>
       </Stack>
     </Nav>
   </Header>
