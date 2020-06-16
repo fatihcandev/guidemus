@@ -1,0 +1,7 @@
+.layout {
+  z-index: 10;
+
+  * {
+    z-index: inherit;
+  }
+}
