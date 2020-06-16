@@ -1,8 +1,8 @@
-import cd from 'classnames'
+import cn from 'classnames'
 
 const SearchIcon = ({ className }) => (
   <svg
-    className={cd('w-6 h-6', className)}
+    className={cn('w-6 h-6', className)}
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
