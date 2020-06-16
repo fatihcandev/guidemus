@@ -1,11 +1,10 @@
 import TextBody from './text-body'
 import Link from 'next/link'
-import cd from 'classnames'
 
-const NavItem = ({ href, className, children }) => (
+const NavItem = ({ href, children, ...props }) => (
   <Link href={href}>
     <a>
-      <TextBody className={cd('text-white', className)}>{children}</TextBody>
+      <TextBody {...props}>{children}</TextBody>
     </a>
   </Link>
 )
