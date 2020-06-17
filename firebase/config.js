@@ -1,6 +1,6 @@
-import * as firebase from 'firebase/app'
+import firebase from 'firebase'
 
-const firebaseConfig = {
+const config = {
   apiKey: 'AIzaSyAjLGO47X-BlrV4E2e8J08iSu5ANPQVqeI',
   authDomain: 'guidemus.firebaseapp.com',
   databaseURL: 'https://guidemus.firebaseio.com',
@@ -11,6 +11,6 @@ const firebaseConfig = {
   measurementId: 'G-WZC8E2454S'
 }
 
-firebase.initializeApp(firebaseConfig)
+!firebase.apps.length && firebase.initializeApp(config)
 export const auth = firebase.auth()
-export const db = firebase.firestore()
+export const db = firebase.database()
