@@ -4,7 +4,6 @@ import layoutStyles from '../styles/landing-layout.module.scss'
 import mainStyles from '../styles/main.module.scss'
 import SEO from './seo'
 import Image from './image'
-import { Html } from 'next/document'
 
 const landing = require('../public/landing.jpg?webp?lqip')
 
