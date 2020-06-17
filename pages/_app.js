@@ -1,7 +1,14 @@
 import '../styles/app.css'
 import '../styles/style.css'
-import App from 'next/app'
+import { Provider } from 'react-redux'
+import { useStore } from '../redux/store'
 
-const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  const store = useStore(pageProps.initialReduxState)
 
-export default MyApp
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  )
+}
