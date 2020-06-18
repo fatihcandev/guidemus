@@ -1,10 +1,10 @@
 import { changePass } from '../actions'
 import { connect } from 'react-redux'
 import Input from '../../components/input'
-import Form from '../../components/form'
+import SignUpForm from '../../components/sign-up-form'
 
 const mapStateToProps = (state) => ({
-  pass: state.signUpReducer.pass
+  pass: state.signUp.pass
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -12,4 +12,3 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export const PasswordInput = connect(mapStateToProps, mapDispatchToProps)(Input)
-connect(mapStateToProps, null)(Form)
