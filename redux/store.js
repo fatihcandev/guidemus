@@ -2,12 +2,11 @@ import { applyMiddleware, createStore } from 'redux'
 import { useMemo } from 'react'
 import rootReducer from './reducers'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import signUpReducer from './reducers/sign-up'
 
 let store
 const initialState = {
-  name: '',
-  email: '',
-  pass: ''
+  signUpReducer: signUpReducer.initialState
 }
 
 const initStore = (preloadedState = initialState) => {
