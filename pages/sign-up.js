@@ -1,12 +1,15 @@
 import { initializeStore } from '../redux/store'
-import { SignUpFormContainer } from '../redux/containers/sign-up-form'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SignUpImage from '../components/sign-up-image'
 import VerificationSent from '../components/verification-sent'
+import SignUpForm from '../components/sign-up-form'
 
 const SignUp = () => {
-  const [isSubmitting, setSubmitting] = useState(false)
   const [isEmailVerificationSent, setEmailVerificationSent] = useState(false)
+
+  useEffect(() => {
+    setEmailVerificationSent(false)
+  }, [isEmailVerificationSent])
 
   return (
     <div className="min-h-screen flex">
@@ -15,11 +18,7 @@ const SignUp = () => {
         {isEmailVerificationSent ? (
           <VerificationSent />
         ) : (
-          <SignUpFormContainer
-            isSubmitting={isSubmitting}
-            setSubmitting={setSubmitting}
-            setEmailVerificationSent={setEmailVerificationSent}
-          />
+          <SignUpForm setEmailVerificationSent={setEmailVerificationSent} />
         )}
       </div>
     </div>
