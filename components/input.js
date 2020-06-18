@@ -1,17 +1,8 @@
 import cn from 'classnames'
 import { Field } from 'formik'
 
-const Input = ({
-  name,
-  type,
-  ph,
-  onChange,
-  value,
-  validationFunc,
-  className,
-  ...props
-}) => (
-  <Field
+const Input = ({ name, type, ph, className }) => (
+  <input
     type={type}
     name={name}
     className={cn(
@@ -19,9 +10,7 @@ const Input = ({
       className
     )}
     placeholder={ph}
-    validate={validationFunc}
     aria-label={ph}
-    {...props}
   />
 )
 
