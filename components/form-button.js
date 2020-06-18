@@ -3,7 +3,7 @@ import Spinner from './spinner'
 
 const FormButton = ({ onClick, isLoading, children }) => (
   <Button
-    className="bg-blue-500 py-3 rounded-md text-white font-bold"
+    className="bg-blue-500 py-3 rounded-md text-white font-bold transition-colors duration-300 hover:bg-blue-600"
     disabled={isLoading}
     onClick={onClick}
   >
