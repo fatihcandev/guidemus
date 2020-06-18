@@ -1,8 +1,7 @@
+/*
 import { applyMiddleware, createStore } from 'redux'
 import { useMemo } from 'react'
-import rootReducer from './reducers'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import signUp from './reducers/sign-up'
 
 let store
 const initialState = {
@@ -43,3 +42,4 @@ export const useStore = (initialState) => {
   const store = useMemo(() => initializeStore(initialState), [initialState])
   return store
 }
+*/
