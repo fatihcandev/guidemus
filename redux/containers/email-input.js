@@ -1,10 +1,10 @@
 import { changeEmail } from '../actions'
 import { connect } from 'react-redux'
 import Input from '../../components/input'
-import Form from '../../components/form'
+import SignUpForm from '../../components/sign-up-form'
 
 const mapStateToProps = (state) => ({
-  email: state.signUpReducer.email
+  email: state.signUp.email
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -12,4 +12,3 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export const EmailInput = connect(mapStateToProps, mapDispatchToProps)(Input)
-export const FormContainer = connect(mapStateToProps, null)(Form)
