@@ -1,10 +1,10 @@
 import { changeName } from '../actions'
 import { connect } from 'react-redux'
 import Input from '../../components/input'
-import Form from '../../components/form'
+import SignUpForm from '../../components/sign-up-form'
 
 const mapStateToProps = (state) => ({
-  name: state.signUpReducer.name
+  name: state.signUp.name
 })
 
 const mapDispatchToProps = (dispatch) => ({
