@@ -4,7 +4,7 @@ const initialState = {
   pass: ''
 }
 
-const signUpReducer = (state = initialState, action) => {
+const signUp = (state = initialState, action) => {
   switch (action.type) {
     case 'CHANGE_NAME':
       return { ...state, name: action.name }
@@ -17,4 +17,4 @@ const signUpReducer = (state = initialState, action) => {
   }
 }
 
-export default signUpReducer
+export default signUp
