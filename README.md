@@ -1,5 +1,6 @@
 <p align="center">
 <a href="https://guidemus.netlify.app" target="_blank">guidemus</a> is a website where students can find the best guide which created by experienced travellers for their Erasmus adventure. It's still being developed.
+  </p>
 
 # The tools that being used
 
