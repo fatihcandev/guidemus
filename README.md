@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://guidemus.netlify.app" target="_blank">guidemus</a> is a website where students can find the best guide which created by experienced travellers for their Erasmus adventure. It's still being developed.
+guidemus is a website where students can find the best guide which created by experienced travellers for their Erasmus adventure. It's still being developed.
   </p>
 
 # The tools that being used
@@ -7,10 +7,11 @@
 - Next.js
 - Redux
 - Firebase
-- Next Optimized Images
+- [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images)
 - React Helmet
 - SCSS
-- Tailwind CSS
+- [TailwindCSS](https://tailwindcss.com)
+- [Heroicons](https://heroicons.dev)
 
 # Installation
 
