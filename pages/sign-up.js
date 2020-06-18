@@ -1,15 +1,10 @@
-import { initializeStore } from '../redux/store'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import SignUpImage from '../components/sign-up-image'
 import VerificationSent from '../components/verification-sent'
 import SignUpForm from '../components/sign-up-form'
 
 const SignUp = () => {
   const [isEmailVerificationSent, setEmailVerificationSent] = useState(false)
-
-  useEffect(() => {
-    setEmailVerificationSent(false)
-  }, [isEmailVerificationSent])
 
   return (
     <div className="min-h-screen flex">
@@ -23,11 +18,6 @@ const SignUp = () => {
       </div>
     </div>
   )
-}
-
-export function getServerSideProps() {
-  const reduxStore = initializeStore()
-  return { props: { initialReduxState: reduxStore.getState() } }
 }
 
 export default SignUp
