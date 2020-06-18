@@ -8,9 +8,15 @@ import { EmailInput } from '../redux/containers/email-input'
 import { PasswordInput } from '../redux/containers/pass-input'
 import NavItem from './nav-item'
 
-const handleSubmit = async (name, email, pass, setSubmitting) => {
+const handleSubmit = async (
+  name,
+  email,
+  pass,
+  setSubmitting,
+  setEmailVerificationSent
+) => {
   setSubmitting(true)
-  const response = await signUp(name, email, pass)
+  const response = await signUp(name, email, pass, setEmailVerificationSent)
   console.log(response)
   setSubmitting(false)
 }
@@ -21,41 +27,47 @@ const SignUpForm = ({
   pass,
   isSubmitting,
   setSubmitting,
-  children
+  setEmailVerificationSent
 }) => {
   return (
-    <div className="p-4 flex flex-col justify-center mx-auto w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4">
-      <Stack>
-        <SocialSignInButton platform="google" />
-        <SocialSignInButton platform="facebook" />
-        <TextBody className="mx-auto">OR</TextBody>
-        <NameInput
-          ph="Your Name"
-          className="border py-2 pl-2 focus:border-blue-500"
-        />
-        <EmailInput
-          ph="E-mail address"
-          className="border py-2 pl-2 focus:border-blue-500"
-        />
-        <PasswordInput
-          password
-          ph="Password"
-          className="border py-2 pl-2 focus:border-blue-500"
-        />
-        <Stack row gap={3} className="justify-center">
-          <TextBody>Have an account?</TextBody>
-          <NavItem className="font-bold hover:underline" href="/sign-in">
-            Sign In
-          </NavItem>
-        </Stack>
-        <FormButton
-          isLoading={isSubmitting}
-          onClick={() => handleSubmit(name, email, pass, setSubmitting)}
-        >
-          Sign Up
-        </FormButton>
+    <Stack>
+      <SocialSignInButton platform="google" />
+      <SocialSignInButton platform="facebook" />
+      <TextBody className="mx-auto">OR</TextBody>
+      <NameInput
+        ph="Your Name"
+        className="border py-2 pl-2 focus:border-blue-500"
+      />
+      <EmailInput
+        ph="E-mail address"
+        className="border py-2 pl-2 focus:border-blue-500"
+      />
+      <PasswordInput
+        password
+        ph="Password"
+        className="border py-2 pl-2 focus:border-blue-500"
+      />
+      <Stack row gap={3} className="justify-center">
+        <TextBody>Have an account?</TextBody>
+        <NavItem className="font-bold" href="/sign-in">
+          Sign In
+        </NavItem>
       </Stack>
-    </div>
+      <FormButton
+        isLoading={isSubmitting}
+        onClick={() =>
+          handleSubmit(
+            name,
+            email,
+            pass,
+            setSubmitting,
+            setEmailVerificationSent
+          )
+        }
+      >
+        Sign Up
+      </FormButton>
+    </Stack>
   )
 }
 
