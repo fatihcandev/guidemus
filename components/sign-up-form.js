@@ -1,6 +1,6 @@
 import FormButton from './form-button'
 import { signUp } from '../firebase/auth'
-import { Formik, Form, ErrorMessage } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import Stack from './stack'
 import Input from './input'
 import TextBody from './text-body'
@@ -41,11 +41,10 @@ const SignUpForm = ({ setEmailVerificationSent }) => (
           <SocialSignInButton platform="google" />
           <SocialSignInButton platform="facebook" />
           <TextBody className="mx-auto">OR</TextBody>
-          <Input
-            className={`border-2 py-2 pl-2 focus:border-blue-500 ${
-              errors.name && 'border-red-500'
-            }`}
-            ph="Your Name"
+          <Field
+            className={`rounded-md bg-gray-100 focus:outline-none focus:bg-white py-3 border-2 py-2 pl-2 
+            focus:border-blue-500 ${errors.name && 'border-red-500'}`}
+            placeholder="Your Name"
             name="name"
             type="name"
           />
@@ -54,11 +53,10 @@ const SignUpForm = ({ setEmailVerificationSent }) => (
             component="div"
             className="text-red-500 font-bold"
           />
-          <Input
-            className={`border-2 py-2 pl-2 focus:border-blue-500 ${
-              errors.email && 'border-red-500'
-            }`}
-            ph="E-mail Address"
+          <Field
+            className={`rounded-md bg-gray-100 focus:outline-none focus:bg-white py-3 border-2 py-2 pl-2 
+            focus:border-blue-500 ${errors.email && 'border-red-500'}`}
+            placeholder="E-mail Address"
             name="email"
             type="email"
           />
@@ -67,11 +65,10 @@ const SignUpForm = ({ setEmailVerificationSent }) => (
             component="div"
             className="text-red-500 font-bold"
           />
-          <Input
-            className={`border-2 py-2 pl-2 focus:border-blue-500 ${
-              errors.password && 'border-red-500'
-            }`}
-            ph="Password"
+          <Field
+            className={`rounded-md bg-gray-100 focus:outline-none focus:bg-white py-3 border-2 py-2 pl-2 
+            focus:border-blue-500 ${errors.password && 'border-red-500'}`}
+            placeholder="Password"
             name="password"
             type="password"
           />
