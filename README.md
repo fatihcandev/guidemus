@@ -7,10 +7,11 @@ guidemus is a website where students can find the best guide which created by ex
 - Next.js
 - Redux
 - Firebase
-- Next Optimized Images
+- [Next Optimized Images](https://github.com/cyrilwanner/next-optimized-images)
 - React Helmet
 - SCSS
-- Tailwind CSS
+- [TailwindCSS](https://tailwindcss.com)
+- [Heroicons](https://heroicons.dev)
 
 # Installation
 
