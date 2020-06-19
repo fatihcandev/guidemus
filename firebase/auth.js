@@ -2,20 +2,16 @@ import { auth, db } from './config'
 
 export const signUp = async (name, email, pass, setEmailVerificationSent) => {
   try {
-    if (email === '' || pass === '') {
-      return 'Email and password is required'
-    } else {
-      const response = await auth.createUserWithEmailAndPassword(email, pass)
-      const user = response.user
-      const uid = user.uid
-      if (user) {
-        setEmailVerificationSent(true)
-        await verifyEmail(user)
-        await addToFirestore(uid, name, email, pass)
-      }
+    const response = await auth.createUserWithEmailAndPassword(email, pass)
+    const user = response.user
+    const uid = user.uid
+    if (user) {
+      await verifyEmail(user)
+      setEmailVerificationSent(true)
+      await addToFirestore(uid, name, email, pass)
     }
-  } catch (e) {
-    return e.message
+  } catch (error) {
+    return error.message
   }
 }
 
@@ -27,15 +23,15 @@ const addToFirestore = async (uid, name, email, pass) => {
       email: email,
       password: pass
     })
-  } catch (e) {
-    return e.message
+  } catch (error) {
+    return error.message
   }
 }
 
 const verifyEmail = async (user) => {
   try {
     await user.sendEmailVerification()
-  } catch (e) {
-    return e.message
+  } catch (error) {
+    return error.message
   }
 }
