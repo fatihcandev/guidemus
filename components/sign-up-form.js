@@ -36,7 +36,7 @@ const SignUpForm = ({ setEmailVerificationSent }) => {
           values.password,
           setEmailVerificationSent
         )
-        setError(response)
+        response && setError(response)
         setSubmitting(false)
       }}
     >
