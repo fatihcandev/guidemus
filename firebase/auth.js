@@ -35,3 +35,21 @@ const verifyEmail = async (user) => {
     return error.message
   }
 }
+
+export const signIn = async (email, pass) => {
+  try {
+    await auth.signInWithEmailAndPassword(email, pass)
+    console.log('Success!')
+  } catch (error) {
+    return error.message
+  }
+}
+
+export const signOut = async () => {
+  try {
+    await auth.signOut()
+    console.log('Logged out!')
+  } catch (error) {
+    console.error(error.message)
+  }
+}
