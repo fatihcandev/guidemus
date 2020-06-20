@@ -1,7 +1,5 @@
 import cn from 'classnames'
 
-const Image = ({ src, dataSrc, alt, ...props }) => (
-  <img src={src} data-src={dataSrc} alt={alt} {...props} />
-)
+const Image = ({ src, alt, ...props }) => <img src={src} alt={alt} {...props} />
 
 export default Image
