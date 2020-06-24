@@ -8,7 +8,7 @@ import SocialSignInButton from './social-sign-in-button'
 import Alert from './alert'
 import { useState } from 'react'
 
-const SignInForm = ({ setEmailVerificationSent }) => {
+const SignInForm = () => {
   const [error, setError] = useState(null)
 
   return (
