@@ -1,4 +1,5 @@
 import { auth, db } from './config'
+import Router from 'next/router'
 
 export const signUp = async (name, email, pass, setEmailVerificationSent) => {
   try {
@@ -39,7 +40,7 @@ const verifyEmail = async (user) => {
 export const signIn = async (email, pass) => {
   try {
     await auth.signInWithEmailAndPassword(email, pass)
-    console.log('Success!')
+    await Router.replace('/home')
   } catch (error) {
     return error.message
   }
@@ -48,7 +49,6 @@ export const signIn = async (email, pass) => {
 export const signOut = async () => {
   try {
     await auth.signOut()
-    console.log('Logged out!')
   } catch (error) {
     console.error(error.message)
   }
