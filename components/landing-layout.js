@@ -11,7 +11,6 @@ const LandingLayout = ({ children }) => (
     <SEO title="guidemus | Find the best guide for your Erasmus journey." />
     <Image
       src={landing}
-      dataSrc={landing.src}
       alt="directions"
       className="lazy fixed min-h-screen object-cover top-0 bottom-0 right-0 left-0 z-0"
     />
